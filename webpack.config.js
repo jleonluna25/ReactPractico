@@ -1,6 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin').default;
 
 module.exports = {
     entry: './src/index.js',
@@ -51,8 +51,8 @@ module.exports = {
     devServer: {
         static: {
             directory: path.join(__dirname, 'dist'),
-            },
-          compress: true,
+        },
+        compress: true,
         port: 3005,
     }
 }
