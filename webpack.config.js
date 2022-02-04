@@ -51,10 +51,10 @@ module.exports = {
     ],
     devServer: {
         historyApiFallback: true,
-        static: {
+        /*static: {
             directory: path.join(__dirname, 'dist'),
         },
         compress: true,
-        port: 3005,
+        port: 3005,*/
     }
 }
