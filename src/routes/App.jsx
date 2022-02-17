@@ -1,18 +1,12 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-<<<<<<< Updated upstream
 import Layout from '../containers/Layout';
-import Login from '../containers/PasswordChange';
+import PasswordChange from '../containers/PasswordChange';
 import PasswordRecovery from '../containers/PasswordRecovery';
-=======
-import Layout from "../containers/Layout";
-import PasswordChange from "../containers/PasswordChange";
-import PasswordRecovery from "../containers/PasswordRecovery";
 import Login from '../containers/Login';
 import SignIn from '../containers/SignIn';
-import EditProfile from "../containers/EditProfile";
-import ProductGallery from "../components/ProductGallery";
->>>>>>> Stashed changes
+import EditProfile from '../containers/EditProfile';
+import ProductGallery from '../components/ProductGallery';
 import Home from '../pages/Home';
 import NotFound from '../pages/NotFound';
 import '../styles/global.scss';
