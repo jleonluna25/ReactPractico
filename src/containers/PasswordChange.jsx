@@ -1,8 +1,8 @@
 import React from 'react';
-import exports from 'webpack';
+
 import '../styles/passwordChange.scss';
 
-const Login = () => {
+const passwordChange = () => {
     return (
         <div className="login">
             <div className="form-container">
@@ -25,4 +25,4 @@ const Login = () => {
     );
 }
 
-export default Login;
+export default passwordChange;
