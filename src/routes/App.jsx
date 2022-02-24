@@ -9,7 +9,13 @@ import EditProfile from '../containers/EditProfile';
 import ProductGallery from '../components/ProductGallery';
 import Home from '../pages/Home';
 import NotFound from '../pages/NotFound';
+import LogOut from '../containers/LogOut';
+import SideMenu from '../containers/SideMenu';
 import '../styles/global.scss';
+import PurchaseOrder from '../containers/PurchaseOrder';
+import PurchaseHistory from '../containers/PurchaseHistory';
+import ProductDetail from '../components/ProductDetail';
+import CheckOut from '../containers/CheckOut';
 
 const App = () => {
     return (
@@ -23,6 +29,12 @@ const App = () => {
                     <Route exact path="/SignIn" element={<SignIn />} />
                     <Route exact path="/EditProfile" element={<EditProfile />} />
                     <Route exact path="/ProductGallery" element={<ProductGallery />} />
+                    <Route exact path="/LogOut" element={<LogOut />} />
+                    <Route exact path="/SideMenu" element={<SideMenu />} />
+                    <Route exact path="/PurchaseOrder" element={<PurchaseOrder />} />
+                    <Route exact path="/PurchaseHistory" element={<PurchaseHistory />} />
+                    <Route exact path="/ProductDetail" element={<ProductDetail />} />
+                    <Route exact path="/CheckOut" element={<CheckOut />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
             </Layout>
