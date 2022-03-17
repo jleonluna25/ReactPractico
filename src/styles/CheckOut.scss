@@ -7,10 +7,12 @@
   }
   .title-container {
     display: flex;
+    align-items: center;
   }
   .title-container img {
     transform: rotate(180deg);
     margin-right: 14px;
+    height: 24px;
   }
   .title {
     font-size: var(--lg);

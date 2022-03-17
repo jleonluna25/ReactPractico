@@ -1,9 +1,13 @@
 import React from 'react';
 import Header from '../components/Header';
+import ProductGallery from '../containers/ProductGallery';
 
-const Home = ()=>{
+const Home = () => {
     return (
-        <Header />
+        <div className="Layout">
+            <Header />
+            <ProductGallery />
+        </div>
     );
 }
 

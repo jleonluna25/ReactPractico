@@ -1,32 +1,25 @@
 import React from "react";
-import '../styles/CheckOut.scss';
+import OrderItem from "@components/OrderItem";
+import '@styles/CheckOut.scss';
+
+const arrow = "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/000000/external-arrow-arrow-line-royyan-wijaya-detailed-outline-royyan-wijaya-12.png";
 
 const CheckOut = () => {
     return (
         <aside className="product-detail">
             <div className="title-container">
-                <img src="./icons/flechita.svg" alt="arrow" />
+                <img src={arrow} alt="arrow" />
                 <p className="title">My order</p>
             </div>
 
             <div className="my-order-content">
-                <div className="shopping-cart">
-                    <figure>
-                        <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="bike" />
-                    </figure>
-                    <p>Bike</p>
-                    <p>$30,00</p>
+                <OrderItem>
                     <img src="./icons/icon_close.png" alt="close" />
-                </div>
+                </OrderItem>
 
-                <div className="shopping-cart">
-                    <figure>
-                        <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="bike" />
-                    </figure>
-                    <p>Bike</p>
-                    <p>$30,00</p>
+                <OrderItem>
                     <img src="./icons/icon_close.png" alt="close" />
-                </div>
+                </OrderItem>
 
                 <div className="shopping-cart">
                     <figure>
