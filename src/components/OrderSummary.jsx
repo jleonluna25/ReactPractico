@@ -1,14 +1,16 @@
-import React from "react";
+import React, {useContext} from "react";
+import AppContext from '@context/AppContext';
 import '@styles/PurchaseHistory.scss';
 
-const OrderSummary = ({children}) => {
+const OrderSummary = ({children, total}) => {
+    const {state}= useContext(AppContext);
     return (
         <div className="order">
             <p>
-                <span>03.25.21</span>
-                <span>6 articles</span>
+                <span> { new Date(Date.now()).toDateString() } </span>
+                <span> { state.cart.length } articles</span>
             </p>
-            <p>$560.00</p>
+            <p>$ { total() } </p>
             {children}
         </div>
     );

@@ -1,23 +1,24 @@
-.shopping-cart {
+.orderItem {
     display: grid;
     grid-template-columns: auto 1fr auto auto;
     gap: 16px;
     margin-bottom: 24px;
     align-items: center;
   }
-  .shopping-cart figure {
+  .orderItem figure {
     margin: 0;
   }
-  .shopping-cart figure img {
+  .orderItem figure img {
     width: 70px;
     height: 70px;
     border-radius: 20px;
     object-fit: cover;
+    transform: rotate(0deg);
   }
-  .shopping-cart p:nth-child(2) {
+  .orderItem p:nth-child(2) {
     color: var(--very-light-pink);
   }
-  .shopping-cart p:nth-child(3) {
+  .orderItem p:nth-child(3) {
     font-size: var(--md);
     font-weight: bold;
   }

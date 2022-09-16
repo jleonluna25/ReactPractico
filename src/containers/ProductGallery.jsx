@@ -1,35 +1,17 @@
 import React from 'react';
 import '@styles/ProductGallery.scss';
-import GalleryItem from '../components/GalleryItem';
+import GalleryItem from '@components/GalleryItem';
+import useGetProducts from '@hooks/useGetProducts';
 
+const API= " https://api.escuelajs.co/api/v1/products";
 const ProductGallery = () => {
+    const products = useGetProducts(API);
     return (
         <section className="main-container">
             <div className="cards-container">
-
-                <GalleryItem />
-
-                <GalleryItem />
-                
-                <GalleryItem />
-
-                <GalleryItem />
-
-                <GalleryItem />
-
-                <GalleryItem />
-
-                <GalleryItem />
-
-                <GalleryItem />
-
-                <GalleryItem />
-
-                <GalleryItem />
-
-                <GalleryItem />
-
-                <GalleryItem />
+                {products.map(product=>(
+                    <GalleryItem product={product} key={product.id} />
+                ))}
             </div>
         </section>
     );

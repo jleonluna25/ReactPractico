@@ -1,23 +1,24 @@
-import React, {useState} from "react";
+import React, {useContext} from "react";
 import '@styles/GalleryItem.scss';
+import AppContext from "@context/AppContext";
 const plusIcon = 'https://img.icons8.com/external-bearicons-blue-bearicons/64/000000/external-plus-essential-collection-bearicons-blue-bearicons.png';
 
-const GalleryItem = ()=> {
-    const [cart, setCar] = useState([]);
+const GalleryItem = ({product})=> {
+    const {addToCart} = useContext(AppContext);
 
-    const handleClick = ()=>{
-        setCar([]);
+    const handleClick = item=>{
+        addToCart(item);
     }
     return (
         <div className="product-card">
-            <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" />
+            <img src={product.images[0]} alt={product.title} />
             <div className="product-info">
                 <div>
-                    <p>$120,00</p>
-                    <p>Bike</p>
+                    <p>${product.price}</p>
+                    <p>{product.title}</p>
                 </div>
-                <figure onClick={handleClick}>
-                    <img src={plusIcon} alt="" />
+                <figure onClick={()=> handleClick(product)}>
+                    <img src={plusIcon} alt="Add to cart" />
                 </figure>
             </div>
         </div>
